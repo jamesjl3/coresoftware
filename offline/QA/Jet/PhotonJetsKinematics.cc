@@ -122,53 +122,67 @@ int PhotonJetsKinematics::Init(PHCompositeNode* /*topNode*/)
   if (m_doOptHist)
   {
     h_emcal_cluster_eta_phi = new TH2F(vecHistNames[2].data(), "", 48, -1.2, 1.2, 64, -M_PI, M_PI);
-    h_emcal_cluster_eta_phi->GetXaxis()->SetTitle("#eta");
+    h_emcal_cluster_eta_phi->SetTitle("EMCal Cluster #eta vs #phi");
+	h_emcal_cluster_eta_phi->GetXaxis()->SetTitle("#eta");
     h_emcal_cluster_eta_phi->GetYaxis()->SetTitle("#Phi");
     h_emcal_cluster_eta_phi->SetOption("COLZ");
 
     h_emcal_cluster_eta = new TH1D(vecHistNames[3].data(), "", 48, -1.2, 1.2);
-    h_emcal_cluster_eta->GetXaxis()->SetTitle("#eta");
+    h_emcal_cluster_eta->SetTitle("EMCal Cluster #eta");
+	h_emcal_cluster_eta->GetXaxis()->SetTitle("#eta");
 
     h_emcal_cluster_phi = new TH1D(vecHistNames[4].data(), "", 64, -M_PI, M_PI);
-    h_emcal_cluster_phi->GetXaxis()->SetTitle("#phi");
+    h_emcal_cluster_phi->SetTitle("EMCal Cluster #phi");
+	h_emcal_cluster_phi->GetXaxis()->SetTitle("#phi");
 
     h_emcal_cluster_eta_with_energy_cut = new TH1D(vecHistNames[12].data(), "", 48, -1.2, 1.2);
+	h_emcal_cluster_phi->SetTitle("EMCal Cluster #phi");
     h_emcal_cluster_eta_with_energy_cut->GetXaxis()->SetTitle("#eta");
   }
   h_emcal_cluster_chi2 = new TH1D(vecHistNames[0].data(), "", 30, 0, 150);
+  h_emcal_cluster_chi2->SetTitle("EMCal Cluster #chi^{2}");
   h_emcal_cluster_chi2->GetXaxis()->SetTitle("#chi^{2}");
  
   h_emcal_cluster_energy = new TH1D(vecHistNames[1].data(), "", 100, 0, 10);
+  h_emcal_cluster_energy->SetTitle("EMCal Cluster Transverse Energy");
   h_emcal_cluster_energy->GetXaxis()->SetTitle("E_{T} [GeV]");
 
   h_emcal_cluster_energy_eta = new TH2D(vecHistNames[5].data(), "",48,-1.2,1.2,100,0,10);
+  h_emcal_cluster_energy_eta->SetTitle("EMCal Cluster Transverse Energy vs #eta");
   h_emcal_cluster_energy_eta->GetXaxis()->SetTitle("#eta");
   h_emcal_cluster_energy_eta->GetYaxis()->SetTitle("E_{T} [GeV]");
 
   h_emcal_cluster_chi2_eta = new TH2D(vecHistNames[6].data(), "",48,-1.2,1.2,150,0,150);
+  h_emcal_cluster_chi2_eta->SetTitle("EMCal Cluster #chi^{2} vs #eta");
   h_emcal_cluster_chi2_eta->GetXaxis()->SetTitle("#eta");
   h_emcal_cluster_chi2_eta->GetYaxis()->SetTitle("#chi^{2}");
 
   h_emcal_cluster_eta_with_cuts = new TH1D(vecHistNames[7].data(), "", 48, -1.2, 1.2);
+  h_emcal_cluster_eta_with_cuts->SetTitle("EMCal Cluster #eta with #chi^{2} < 3 and E_{T} > 0.5");
   h_emcal_cluster_eta_with_cuts->GetXaxis()->SetTitle("#eta");
 
   h_emcal_cluster_energy_phi = new TH2D(vecHistNames[8].data(), "",64,-M_PI,M_PI,100,0,10);
+  h_emcal_cluster_energy_phi->SetTitle("EMCal Cluster Transverse Energy vs #phi");
   h_emcal_cluster_energy_phi->GetXaxis()->SetTitle("#phi");
   h_emcal_cluster_energy_phi->GetYaxis()->SetTitle("E_{T} [GeV]");
 
   h_emcal_cluster_chi2_phi = new TH2D(vecHistNames[9].data(), "",64,-M_PI,M_PI,150,0,150);
+  h_emcal_cluster_chi2_phi->SetTitle("EMCal Cluster #chi^{2} vs #phi");
   h_emcal_cluster_chi2_phi->GetXaxis()->SetTitle("#phi");
   h_emcal_cluster_chi2_phi->GetYaxis()->SetTitle("#chi2^{2}");
 
   h_emcal_cluster_phi_with_cuts = new TH1D(vecHistNames[10].data(), "", 64,-M_PI, M_PI);
+  h_emcal_cluster_phi_with_cuts->SetTitle("EMCal Cluster #phi with #chi^{2} < 3 and E_{T} > 0.5");
   h_emcal_cluster_phi_with_cuts->GetXaxis()->SetTitle("#phi");
 
   h_emcal_cluster_eta_phi_with_cuts = new TH2F(vecHistNames[11].data(), "", 48, -1.2, 1.2, 64, -M_PI, M_PI);
+  h_emcal_cluster_eta_phi_with_cuts->SetTitle("EMCal Cluster #eta vs #phi with #chi^{2} < 3 and E_{T} > 0.5");
   h_emcal_cluster_eta_phi_with_cuts->GetXaxis()->SetTitle("#eta");
   h_emcal_cluster_eta_phi_with_cuts->GetYaxis()->SetTitle("#phi");
   h_emcal_cluster_eta_phi_with_cuts->SetOption("COLZ");
 
   h_emcal_cluster_chi2_energy = new TH2F(vecHistNames[13].data(),"",100,0,10,150,0,150);
+  h_emcal_cluster_chi2_energy->SetTitle("EMCal Cluster Energy vs #chi^{2}");
   h_emcal_cluster_chi2_energy->GetXaxis()->SetTitle("E_{T} [GeV]");
   h_emcal_cluster_chi2_energy->GetYaxis()->SetTitle("#chi2^{2}");
 
