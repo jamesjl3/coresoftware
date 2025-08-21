@@ -364,7 +364,7 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
   h_jet_pt_spectra_r02->SetMarkerStyle(8);
   h_jet_pt_spectra_r02->SetMarkerColor(1);
   h_jet_pt_spectra_r02->SetLineColor(1);
-  h_jet_pt_spectra_r02->SetTitle("");
+  h_jet_pt_spectra_r02->SetTitle("Jet p_{T} Spectra for R02");
   h_jet_pt_spectra_r02->GetYaxis()->SetTitle("Counts");
   h_jet_pt_spectra_r02->SetStats(false);
 
@@ -372,7 +372,7 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
   h_jet_pt_spectra_r03->SetMarkerStyle(8);
   h_jet_pt_spectra_r03->SetMarkerColor(1);
   h_jet_pt_spectra_r03->SetLineColor(1);
-  h_jet_pt_spectra_r03->SetTitle("");
+  h_jet_pt_spectra_r03->SetTitle("Jet p_{T} Spectra for R03");
   h_jet_pt_spectra_r03->GetYaxis()->SetTitle("Counts");
   h_jet_pt_spectra_r03->SetStats(false);
 
@@ -380,7 +380,7 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
   h_jet_pt_spectra_r04->SetMarkerStyle(8);
   h_jet_pt_spectra_r04->SetMarkerColor(1);
   h_jet_pt_spectra_r04->SetLineColor(1);
-  h_jet_pt_spectra_r04->SetTitle("");
+  h_jet_pt_spectra_r04->SetTitle("Jet p_{T} Spectra for R04");
   h_jet_pt_spectra_r04->GetYaxis()->SetTitle("Counts");
   h_jet_pt_spectra_r04->SetStats(false);
 
@@ -388,35 +388,35 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
   h_jet_pt_spectra_r05->SetMarkerStyle(8);
   h_jet_pt_spectra_r05->SetMarkerColor(1);
   h_jet_pt_spectra_r05->SetLineColor(1);
-  h_jet_pt_spectra_r05->SetTitle("");
+  h_jet_pt_spectra_r05->SetTitle("Jet p_{T} Spectra for R05");
   h_jet_pt_spectra_r05->GetYaxis()->SetTitle("Counts");
   h_jet_pt_spectra_r05->SetStats(false);
 
   // for jet eta-phi [R02]
   h_jet_eta_phi_r02->SetStats(false);
-  h_jet_eta_phi_r02->SetTitle("");
+  h_jet_eta_phi_r02->SetTitle("Jet #eta vs #phi for R02");
 
   // for jet eta-phi [R03]
   h_jet_eta_phi_r03->SetStats(false);
-  h_jet_eta_phi_r03->SetTitle("");
+  h_jet_eta_phi_r03->SetTitle("Jet #eta vs #phi for R03");
 
   // for jet eta-phi [R04]
   h_jet_eta_phi_r04->SetStats(false);
-  h_jet_eta_phi_r04->SetTitle("");
+  h_jet_eta_phi_r04->SetTitle("Jet #eta vs #phi for R04");
 
   // for jet eta-phi [R05]
   h_jet_eta_phi_r05->SetStats(false);
-  h_jet_eta_phi_r05->SetTitle("");
+  h_jet_eta_phi_r05->SetTitle("Jet #eta vs #phi for R05");
 
   // for jet mass vs pt [R02]
   h_jet_mass_pt_r02->SetStats(false);
-  h_jet_mass_pt_r02->SetTitle("");
+  h_jet_mass_pt_r02->SetTitle("Jet Mass vs p_{T} for R02");
 
   // for average jet mass vs pt [R02]
   h_jet_average_mass_pt_1D_r02 = (TH1D *) h_jet_mass_pt_r02->ProfileX();
   h_jet_average_mass_pt_1D_r02->SetStats(false);
-  h_jet_average_mass_pt_1D_r02->SetTitle("");
-  h_jet_average_mass_pt_1D_r02->GetXaxis()->SetTitle("p_{T} [GeV/c]");
+  h_jet_average_mass_pt_1D_r02->SetTitle("Average Jet Mass vs p_{T} for R02");
+  h_jet_average_mass_pt_1D_r02->GetXaxis()->SetTitle("p_{T} [GeV]");
   h_jet_average_mass_pt_1D_r02->GetYaxis()->SetTitle("Average Jet Mass [GeV/c^{2}]");
   h_jet_average_mass_pt_1D_r02->SetMarkerStyle(8);
   h_jet_average_mass_pt_1D_r02->SetMarkerColor(1);
@@ -424,13 +424,13 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
 
   // for jet mass vs pt [R03]
   h_jet_mass_pt_r03->SetStats(false);
-  h_jet_mass_pt_r03->SetTitle("");
+  h_jet_mass_pt_r03->SetTitle("Jet Mass vs p_{T} for R03");
 
   // for average jet mass vs pt [R03]
   h_jet_average_mass_pt_1D_r03 = (TH1D *) h_jet_mass_pt_r03->ProfileX();
   h_jet_average_mass_pt_1D_r03->SetStats(false);
-  h_jet_average_mass_pt_1D_r03->SetTitle("");
-  h_jet_average_mass_pt_1D_r03->GetXaxis()->SetTitle("p_{T} [GeV/c]");
+  h_jet_average_mass_pt_1D_r03->SetTitle("Average Jet Mass vs p_{T} for R03");
+  h_jet_average_mass_pt_1D_r03->GetXaxis()->SetTitle("p_{T} [GeV]");
   h_jet_average_mass_pt_1D_r03->GetYaxis()->SetTitle("Average Jet Mass [GeV/c^{2}]");
   h_jet_average_mass_pt_1D_r03->SetMarkerStyle(8);
   h_jet_average_mass_pt_1D_r03->SetMarkerColor(1);
@@ -438,13 +438,13 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
 
   // for jet mass vs pt [R04]
   h_jet_mass_pt_r04->SetStats(false);
-  h_jet_mass_pt_r04->SetTitle("");
+  h_jet_mass_pt_r04->SetTitle("Jet Mass vs p_{T} for R04");
 
   // for average jet mass vs pt [R04]
   h_jet_average_mass_pt_1D_r04 = (TH1D *) h_jet_mass_pt_r04->ProfileX();
   h_jet_average_mass_pt_1D_r04->SetStats(false);
-  h_jet_average_mass_pt_1D_r04->SetTitle("");
-  h_jet_average_mass_pt_1D_r04->GetXaxis()->SetTitle("p_{T} [GeV/c]");
+  h_jet_average_mass_pt_1D_r04->SetTitle("Average Jet Mass vs p_{T} for R04");
+  h_jet_average_mass_pt_1D_r04->GetXaxis()->SetTitle("p_{T} [GeV]");
   h_jet_average_mass_pt_1D_r04->GetYaxis()->SetTitle("Average Jet Mass [GeV/c^{2}]");
   h_jet_average_mass_pt_1D_r04->SetMarkerStyle(8);
   h_jet_average_mass_pt_1D_r04->SetMarkerColor(1);
@@ -452,13 +452,13 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
 
   // for jet mass vs pt [R05]
   h_jet_mass_pt_r05->SetStats(false);
-  h_jet_mass_pt_r05->SetTitle("");
+  h_jet_mass_pt_r05->SetTitle("Jet Mass vs p_{T} for R05");
 
   // for average jet mass vs pt [R05]
   h_jet_average_mass_pt_1D_r05 = (TH1D *) h_jet_mass_pt_r05->ProfileX();
   h_jet_average_mass_pt_1D_r05->SetStats(false);
-  h_jet_average_mass_pt_1D_r05->SetTitle("");
-  h_jet_average_mass_pt_1D_r05->GetXaxis()->SetTitle("p_{T} [GeV/c]");
+  h_jet_average_mass_pt_1D_r05->SetTitle("Average Jet Mass vs p_{T} for R05");
+  h_jet_average_mass_pt_1D_r05->GetXaxis()->SetTitle("p_{T} [GeV]");
   h_jet_average_mass_pt_1D_r05->GetYaxis()->SetTitle("Average Jet Mass [GeV/c^{2}]");
   h_jet_average_mass_pt_1D_r05->SetMarkerStyle(8);
   h_jet_average_mass_pt_1D_r05->SetMarkerColor(1);
@@ -466,12 +466,12 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
 
   // for jet mass vs eta [R02]
   h_jet_mass_eta_r02->SetStats(false);
-  h_jet_mass_eta_r02->SetTitle("");
+  h_jet_mass_eta_r02->SetTitle("Jet Mass vs #eta for R02");
 
   // for average jet mass vs eta [R02]
   h_jet_average_mass_eta_1D_r02 = (TH1D *) h_jet_mass_eta_r02->ProfileX();
   h_jet_average_mass_eta_1D_r02->SetStats(false);
-  h_jet_average_mass_eta_1D_r02->SetTitle("");
+  h_jet_average_mass_eta_1D_r02->SetTitle("Average Jet Mass vs #eta for R02");
   h_jet_average_mass_eta_1D_r02->GetXaxis()->SetTitle("#eta");
   h_jet_average_mass_eta_1D_r02->GetYaxis()->SetTitle("Average Jet Mass [GeV/c^{2}]");
   h_jet_average_mass_eta_1D_r02->SetMarkerStyle(8);
@@ -480,12 +480,12 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
 
   // for jet mass vs eta [R03]
   h_jet_mass_eta_r03->SetStats(false);
-  h_jet_mass_eta_r03->SetTitle("");
+  h_jet_mass_eta_r03->SetTitle("Jet Mass vs #eta for R03");
 
   // for average jet mass vs eta [R03]
   h_jet_average_mass_eta_1D_r03 = (TH1D *) h_jet_mass_eta_r03->ProfileX();
   h_jet_average_mass_eta_1D_r03->SetStats(false);
-  h_jet_average_mass_eta_1D_r03->SetTitle("");
+  h_jet_average_mass_eta_1D_r03->SetTitle("Average Jet Mass vs #eta for R03");
   h_jet_average_mass_eta_1D_r03->GetXaxis()->SetTitle("#eta");
   h_jet_average_mass_eta_1D_r03->GetYaxis()->SetTitle("Average Jet Mass [GeV/c^{2}]");
   h_jet_average_mass_eta_1D_r03->SetMarkerStyle(8);
@@ -494,12 +494,12 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
 
   // for jet mass vs eta [R04]
   h_jet_mass_eta_r04->SetStats(false);
-  h_jet_mass_eta_r04->SetTitle("");
+  h_jet_mass_eta_r04->SetTitle("Jet Mass vs p_{T} for R04");
 
   // for average jet mass vs eta [R04]
   h_jet_average_mass_eta_1D_r04 = (TH1D *) h_jet_mass_eta_r04->ProfileX();
   h_jet_average_mass_eta_1D_r04->SetStats(false);
-  h_jet_average_mass_eta_1D_r04->SetTitle("");
+  h_jet_average_mass_eta_1D_r04->SetTitle("Average Jet Mass vs #eta for R04");
   h_jet_average_mass_eta_1D_r04->GetXaxis()->SetTitle("#eta");
   h_jet_average_mass_eta_1D_r04->GetYaxis()->SetTitle("Average Jet Mass [GeV/c^{2}]");
   h_jet_average_mass_eta_1D_r04->SetMarkerStyle(8);
@@ -508,12 +508,12 @@ int JetKinematicCheck::End(PHCompositeNode * /*unused*/)
 
   // for jet mass vs eta [R05]
   h_jet_mass_eta_r05->SetStats(false);
-  h_jet_mass_eta_r05->SetTitle("");
+  h_jet_mass_eta_r05->SetTitle("Jet Mass vs #eta for R05");
 
   // for average jet mass vs eta [R05]
   h_jet_average_mass_eta_1D_r05 = (TH1D *) h_jet_mass_eta_r05->ProfileX();
   h_jet_average_mass_eta_1D_r05->SetStats(false);
-  h_jet_average_mass_eta_1D_r05->SetTitle("");
+  h_jet_average_mass_eta_1D_r05->SetTitle("Average Jet Mass vs #eta for R05");
   h_jet_average_mass_eta_1D_r05->GetXaxis()->SetTitle("#eta");
   h_jet_average_mass_eta_1D_r05->GetYaxis()->SetTitle("Average Jet Mass [GeV/c^{2}]");
   h_jet_average_mass_eta_1D_r05->SetMarkerStyle(8);
