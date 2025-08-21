@@ -102,15 +102,19 @@ int StructureinJets::Init(PHCompositeNode* /*topNode*/)
   }
 
   m_hSumTrkVsJetPtVsCent = new TH3F(vecHistNames[0].data(), "", 100, 0, 100, 200, 0, 100, 10, 0, 100);
+  m_hSumTrkVsJetPtVsCent->SetTitle("Jet p_{T} vs Sum Track p_{T} vs Centrality");
   m_hSumTrkVsJetPtVsCent->GetXaxis()->SetTitle("Jet p_{T} [GeV]");
   m_hSumTrkVsJetPtVsCent->GetYaxis()->SetTitle("Sum track p_{T} [GeV]");
   m_hSumTrkVsJetPt = new TH2F(vecHistNames[1].data(), "", 100, 0, 100, 200, 0, 100);
+  m_hSumTrkVsJetPt->SetTitle("Jet p_{T} vs Sum Track p_{T}");
   m_hSumTrkVsJetPt->GetXaxis()->SetTitle("Jet p_{T} [GeV]");
   m_hSumTrkVsJetPt->GetYaxis()->SetTitle("Sum track p_{T} [GeV]");
   m_hSumTrkOverJetPt = new TH1F(vecHistNames[2].data(), "", 50, 0, 5);
+  m_hSumTrkOverJetPt->SetTitle("Fraction of Jet p_{T} Over Sum Track p_{T}");
   m_hSumTrkOverJetPt->GetXaxis()->SetTitle("Sum track p_{T} / Jet p_{T}");
   m_hSumTrkOverJetPt->GetYaxis()->SetTitle("Counts");
   m_hSumTrkPt = new TH1F(vecHistNames[3].data(), "", 200, 0, 100);
+  m_hSumTrkPt->SetTitle("Sum Track p_{T}");
   m_hSumTrkPt->GetXaxis()->SetTitle("Sum track p_{T}");
   m_hSumTrkPt->GetYaxis()->SetTitle("Counts");
 
