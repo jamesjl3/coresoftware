@@ -92,41 +92,49 @@ int JetSeedCount::Init(PHCompositeNode * /*topNode*/)
 
   // make histograms
   m_hRawSeedCount = new TH1F(vecHistNames[0].data(), "", 100, 0.00, 50.00);
+  m_hRawSeedCount->SetTitle("Jet Raw Seed Count per Event");
   m_hRawSeedCount->GetXaxis()->SetTitle("Raw Seed Count per Event");
   m_hRawSeedCount->GetYaxis()->SetTitle("Number of Entries");
   m_manager->registerHisto(m_hRawSeedCount);
 
   m_hRawPt = new TH1F(vecHistNames[1].data(), "", 1000, 0.00, 50.00);
+  m_hRawPt->SetTitle("Jet Raw Seed p_{T} Cut Spectra");
   m_hRawPt->GetXaxis()->SetTitle("Jet p_{T} [GeV]");
   m_hRawPt->GetYaxis()->SetTitle("Number of Entries");
   m_manager->registerHisto(m_hRawPt);
 
   m_hRawPt_All = new TH1F(vecHistNames[2].data(), "", 1000, 0.00, 50.00);
+  m_hRawPt_All->SetTitle("Jet Raw Seed p_{T} All Spectra");
   m_hRawPt_All->GetXaxis()->SetTitle("Jet p_{T} [GeV]");
   m_hRawPt_All->GetYaxis()->SetTitle("Number of Entries");
   m_manager->registerHisto(m_hRawPt_All);
 
   m_hRawEtaVsPhi = new TH2F(vecHistNames[3].data(), "", 220, -1.1, 1.1, 628, -3.14, 3.14);
+  m_hRawEtaVsPhi->SetTitle("Jet Raw Seed #eta vs #phi");
   m_hRawEtaVsPhi->GetXaxis()->SetTitle("Jet #eta [Rads.]");
   m_hRawEtaVsPhi->GetYaxis()->SetTitle("Jet #phi [Rads.]");
   m_manager->registerHisto(m_hRawEtaVsPhi);
 
   m_hSubSeedCount = new TH1F(vecHistNames[4].data(), "", 100, 0.00, 50.00);
+  m_hSubSeedCount->SetTitle("Jet Sub Seed Count per Event");
   m_hSubSeedCount->GetXaxis()->SetTitle("Sub Seed Count per Event");
   m_hSubSeedCount->GetYaxis()->SetTitle("Number of Entries");
   m_manager->registerHisto(m_hSubSeedCount);
 
   m_hSubPt = new TH1F(vecHistNames[5].data(), "", 1000, 0.00, 50.00);
+  m_hSubPt->SetTitle("Jet Sub Seed p_{T} Cut Spectra");
   m_hSubPt->GetXaxis()->SetTitle("Jet p_{T} [GeV]");
   m_hSubPt->GetYaxis()->SetTitle("Number of Entries");
   m_manager->registerHisto(m_hSubPt);
 
   m_hSubPt_All = new TH1F(vecHistNames[6].data(), "", 1000, 0.00, 50.00);
+  m_hSubPt_All->SetTitle("Jet Sub Seed p_{T} All Spectra");
   m_hSubPt_All->GetXaxis()->SetTitle("Jet p_{T} [GeV]");
   m_hSubPt_All->GetYaxis()->SetTitle("Number of Entries");
   m_manager->registerHisto(m_hSubPt_All);
 
   m_hSubEtaVsPhi = new TH2F(vecHistNames[7].data(), "", 220, -1.1, 1.1, 628, -3.14, 3.14);
+  m_hSubEtaVsPhi->SetTitle("Jet Sub Seed #eta vs #phi ");
   m_hSubEtaVsPhi->GetXaxis()->SetTitle("Jet #eta [Rads.]");
   m_hSubEtaVsPhi->GetYaxis()->SetTitle("Jet #phi [Rads.]");
   m_manager->registerHisto(m_hSubEtaVsPhi);
@@ -135,26 +143,31 @@ int JetSeedCount::Init(PHCompositeNode * /*topNode*/)
   if (!m_inPPMode)
   {
     m_hRawSeedEnergyVsCent = new TH2F(vecHistNames[8].data(), "", 10.00, 0.00, 100.00, 100, 0.00, 50.00);
+    m_hRawSeedEnergyVsCent->SetTitle("Raw Seed Energy vs Centrality");
     m_hRawSeedEnergyVsCent->GetXaxis()->SetTitle("Centrality");
     m_hRawSeedEnergyVsCent->GetYaxis()->SetTitle("RawSeedEnergy");
     m_manager->registerHisto(m_hRawSeedEnergyVsCent);
 
     m_hSubSeedEnergyVsCent = new TH2F(vecHistNames[9].data(), "", 10.00, 0.00, 100.00, 100, 0.00, 50.00);
+    m_hSubSeedEnergyVsCent->SetTitle("Sub Seed Energy vs Centrality");
     m_hSubSeedEnergyVsCent->GetXaxis()->SetTitle("Centrality");
     m_hSubSeedEnergyVsCent->GetYaxis()->SetTitle("SubSeedEnergy");
     m_manager->registerHisto(m_hSubSeedEnergyVsCent);
 
     m_hCentMbd = new TH1F(vecHistNames[10].data(), "", 10, 0.00, 100.00);
+    m_hCentMbd->SetTitle("MBD Centrality");
     m_hCentMbd->GetXaxis()->SetTitle("Centrality (Mbd)");
     m_hCentMbd->GetYaxis()->SetTitle("Number of Entries");
     m_manager->registerHisto(m_hCentMbd);
 
     m_hRawSeedVsCent = new TH2F(vecHistNames[11].data(), "", 10, 0.00, 100.00, 101, -0.5, 100.5);
+    m_hRawSeedVsCent->SetTitle("Raw Seed Count vs Centrality");
     m_hRawSeedVsCent->GetXaxis()->SetTitle("Centrality");
     m_hRawSeedVsCent->GetYaxis()->SetTitle("Raw Seed Count");
     m_manager->registerHisto(m_hRawSeedVsCent);
 
     m_hSubSeedVsCent = new TH2F(vecHistNames[12].data(), "", 10, 0.00, 100.00, 101, -0.5, 100.5);
+    m_hSubSeedVsCent->SetTitle("Sub Seed Count vs Centrality");
     m_hSubSeedVsCent->GetXaxis()->SetTitle("Centrality");
     m_hSubSeedVsCent->GetYaxis()->SetTitle("Sub Seed Count");
     m_manager->registerHisto(m_hSubSeedVsCent);
