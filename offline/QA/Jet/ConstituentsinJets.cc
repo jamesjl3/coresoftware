@@ -119,38 +119,47 @@ int ConstituentsinJets::Init(PHCompositeNode * /*topNode*/)
 
   // declare histograms and include x and y axis labels in the constructor
   h1_ConstituentsinJets_total = new TH1D(vecHistNames[0].data(), "", N_const, N_const_bins);
+  h1_ConstituentsinJets_total->SetTitle("Constituents in Jets Total");
   h1_ConstituentsinJets_total->GetXaxis()->SetTitle("N constituents");
   h1_ConstituentsinJets_total->GetYaxis()->SetTitle("Counts");
 
   h1_ConstituentsinJets_IHCAL = new TH1D(vecHistNames[1].data(), "", N_const, N_const_bins);
+  h1_ConstituentsinJets_IHCAL->SetTitle("Consistuents in Jets for IHCal");
   h1_ConstituentsinJets_IHCAL->GetXaxis()->SetTitle("N constituents");
   h1_ConstituentsinJets_IHCAL->GetYaxis()->SetTitle("Counts");
 
   h1_ConstituentsinJets_OHCAL = new TH1D(vecHistNames[2].data(), "", N_const, N_const_bins);
+  h1_ConstituentsinJets_OHCAL->SetTitle("Constituents in Jets for OHCal");
   h1_ConstituentsinJets_OHCAL->GetXaxis()->SetTitle("N constituents");
   h1_ConstituentsinJets_OHCAL->GetYaxis()->SetTitle("Counts");
 
   h1_ConstituentsinJets_CEMC = new TH1D(vecHistNames[3].data(), "", N_const, N_const_bins);
+  h1_ConstituentsinJets_CEMC->SetTitle("Constituents in Jets for EMCal");
   h1_ConstituentsinJets_CEMC->GetXaxis()->SetTitle("N constituents");
   h1_ConstituentsinJets_CEMC->GetYaxis()->SetTitle("Counts");
 
   h2_ConstituentsinJets_vs_caloLayer = new TH2D(vecHistNames[4].data(), "", N_calo_layers, calo_layers_bins, N_const, N_const_bins);
+  h2_ConstituentsinJets_vs_caloLayer->SetTitle("Constituents in Jets vs Calo Layer");
   h2_ConstituentsinJets_vs_caloLayer->GetXaxis()->SetTitle("Calo Layer");
   h2_ConstituentsinJets_vs_caloLayer->GetYaxis()->SetTitle("N constituents");
 
   h1_jetFracE_IHCAL = new TH1D(vecHistNames[5].data(), "", N_frac, frac_bins);
+  h1_jetFracE_IHCAL->SetTitle("Jet E Fraction for IHCal"); 
   h1_jetFracE_IHCAL->GetXaxis()->SetTitle("E fraction");
   h1_jetFracE_IHCAL->GetYaxis()->SetTitle("Counts");
 
   h1_jetFracE_OHCAL = new TH1D(vecHistNames[6].data(), "", N_frac, frac_bins);
+  h1_jetFracE_OHCAL->SetTitle("Jet E Fraction for OHCal");
   h1_jetFracE_OHCAL->GetXaxis()->SetTitle("E fraction");
   h1_jetFracE_OHCAL->GetYaxis()->SetTitle("Counts");
 
   h1_jetFracE_CEMC = new TH1D(vecHistNames[7].data(), "", N_frac, frac_bins);
+  h1_jetFracE_CEMC->SetTitle("Jet E Fraction for EMCal");
   h1_jetFracE_CEMC->GetXaxis()->SetTitle("E fraction");
   h1_jetFracE_CEMC->GetYaxis()->SetTitle("Counts");
 
   h2_jetFracE_vs_caloLayer = new TH2D(vecHistNames[8].data(), "", N_calo_layers, calo_layers_bins, N_frac, frac_bins);
+  h2_jetFracE_vs_caloLayer->SetTitle("Jet E Fraction vs CaloLayer");
   h2_jetFracE_vs_caloLayer->GetXaxis()->SetTitle("Calo Layer");
   h2_jetFracE_vs_caloLayer->GetYaxis()->SetTitle("E fraction");
 
